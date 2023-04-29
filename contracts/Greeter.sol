@@ -10,9 +10,14 @@ contract Greeter {
      constructor ()  {
         _owner = msg.sender;
      }
+    modifier onlyOwner(){
+        require(
+            msg.sender == _owner,
+            "Ownable: caller is not the owner"
+        );_;
+    }
 
-
-function setGreeting(string calldata greeting) external {
+function setGreeting(string calldata greeting) external onlyOwner{ // added a modifier to be called befpre
 _greeting = greeting;
 
 }
