@@ -2,8 +2,8 @@
 // 1. Pragma
 // pragma solidity ^0.8.8;
 
-pragma solidity >=0.6.0;
-import 'openzeppelin-solidity/contracts/access/Ownable.sol';
+pragma solidity >=0.7.0;
+import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract Greeter is Ownable{ // Allow our greeter contract to inherit from OWnable contract from openzeeplin
      string public _greeting = "Hello world";
